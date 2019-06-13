@@ -18,7 +18,7 @@ class Cat implements Movement, Eat, Eaten
         echo 'Кошка движется<br>';
     }
 
-    public function eat(& $animal)
+    public function eat(Eaten &$animal) //съесть можно только съедобное животное
     {
         if(! $animal instanceof Mouse)
         {

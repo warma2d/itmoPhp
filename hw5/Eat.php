@@ -2,5 +2,5 @@
 
 interface Eat
 {
-    function eat(& $animal);
+    function eat(Eaten &$animal);
 }

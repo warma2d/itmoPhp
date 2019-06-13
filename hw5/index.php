@@ -8,8 +8,6 @@ require_once 'Mouse.php';
 require_once 'Cat.php';
 require_once 'Dog.php';
 
-
-
 $mouse = new Mouse();
 $dog = new Dog();
 $cat = new Cat();
@@ -21,3 +19,7 @@ $cat->move();
 
 $dog->eat($cat);
 $dog->move();
+
+$mouse = new Mouse();
+$mouse->move();
+$dog->eat($mouse);

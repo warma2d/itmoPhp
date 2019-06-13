@@ -12,11 +12,11 @@ class Dog implements Movement, Eat
         echo 'Собака движется<br>';
     }
 
-    public function eat(& $animal)
+    public function eat(Eaten &$animal)
     {
-        if(! $animal instanceof Cat)
+        if(! $animal instanceof Cat && ! $animal instanceof Mouse)
         {
-            echo 'Ошибка! Собака может съесть только кошку!<br>';
+            echo 'Ошибка! Собака может съесть только кошку или мышь!<br>';
             return;
         }
         echo self::class . ' съела животное класса '. get_class($animal).'<br>';
